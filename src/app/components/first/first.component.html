@@ -1,0 +1,11 @@
+<div (click)="showHide()" class="alert alert-success">
+  <p [hidden]="isHidden">{{ name }} works!</p>
+  <input
+    #myInput
+    (change)="changeMessage(myInput.value)"
+    class="form-control"
+    type="text"
+  />
+  Le contenu de l'input est : {{ message }}
+  <app-second />
+</div>
