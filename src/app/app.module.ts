@@ -8,14 +8,15 @@ import { SecondComponent } from "./components/second/second.component";
 import { ColorComponent } from "./components/color/color.component";
 import { TwoComponent } from "./components/two/two.component";
 import { FormsModule } from "@angular/forms";
-import { RotatingCardComponent } from './components/rotating-card/rotating-card.component';
-import { PereComponent } from './commInterCompo/pere/pere.component';
-import { FilsComponent } from './commInterCompo/fils/fils.component';
-import { CvComponent } from './cv/cv/cv.component';
-import { CvListComponent } from './cv/cv-list/cv-list.component';
-import { CvItemComponent } from './cv/cv-item/cv-item.component';
-import { CvCardComponent } from './cv/cv-card/cv-card.component';
-import { TestNgStyleComponent } from './directives/test-ng-style/test-ng-style.component';
+import { RotatingCardComponent } from "./components/rotating-card/rotating-card.component";
+import { PereComponent } from "./commInterCompo/pere/pere.component";
+import { FilsComponent } from "./commInterCompo/fils/fils.component";
+import { CvComponent } from "./cv/cv/cv.component";
+import { CvListComponent } from "./cv/cv-list/cv-list.component";
+import { CvItemComponent } from "./cv/cv-item/cv-item.component";
+import { CvCardComponent } from "./cv/cv-card/cv-card.component";
+import { TestNgStyleComponent } from "./directives/test-ng-style/test-ng-style.component";
+import { MiniWordComponent } from "./directives/mini-word/mini-word.component";
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { TestNgStyleComponent } from './directives/test-ng-style/test-ng-style.c
     CvItemComponent,
     CvCardComponent,
     TestNgStyleComponent,
+    MiniWordComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
