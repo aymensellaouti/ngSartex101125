@@ -29,7 +29,8 @@ import { WeekTodoComponent } from "./todo/week-todo/week-todo.component";
 import { ToastrModule } from "ngx-toastr";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { EmbaucheComponent } from "./cv/embauche/embauche.component";
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { NavbarComponent } from "./components/navbar/navbar.component";
+import { DetailsCvComponent } from "./cv/details-cv/details-cv.component";
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,6 +56,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     WeekTodoComponent,
     EmbaucheComponent,
     NavbarComponent,
+    DetailsCvComponent,
   ],
   imports: [
     BrowserModule,
