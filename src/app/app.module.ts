@@ -29,6 +29,7 @@ import { WeekTodoComponent } from "./todo/week-todo/week-todo.component";
 import { ToastrModule } from "ngx-toastr";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { EmbaucheComponent } from "./cv/embauche/embauche.component";
+import { NavbarComponent } from './components/navbar/navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,6 +54,7 @@ import { EmbaucheComponent } from "./cv/embauche/embauche.component";
     TodoComponent,
     WeekTodoComponent,
     EmbaucheComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
