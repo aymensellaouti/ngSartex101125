@@ -18,6 +18,7 @@ import { CvCardComponent } from "./cv/cv-card/cv-card.component";
 import { TestNgStyleComponent } from "./directives/test-ng-style/test-ng-style.component";
 import { MiniWordComponent } from "./directives/mini-word/mini-word.component";
 import { AmpouleComponent } from './directives/ampoule/ampoule.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { AmpouleComponent } from './directives/ampoule/ampoule.component';
     TestNgStyleComponent,
     MiniWordComponent,
     AmpouleComponent,
+    HighlightDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
