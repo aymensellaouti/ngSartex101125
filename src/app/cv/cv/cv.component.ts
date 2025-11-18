@@ -1,6 +1,7 @@
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import { Cv } from "../model/cv.model";
 import { LoggerService } from "../../services/logger.service";
+import { TodoService } from "../../todo/service/todo.service";
 
 @Component({
   selector: "app-cv",
@@ -8,6 +9,7 @@ import { LoggerService } from "../../services/logger.service";
   styleUrls: ["./cv.component.css"],
 })
 export class CvComponent {
+  todoService = inject(TodoService);
   today = new Date();
   cvs: Cv[] = [
     new Cv(1, "anis", "El Hadj Ali", "Dev", "", "12121212", 20),

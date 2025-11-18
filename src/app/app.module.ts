@@ -52,7 +52,6 @@ import { WeekTodoComponent } from "./todo/week-todo/week-todo.component";
     WeekTodoComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
