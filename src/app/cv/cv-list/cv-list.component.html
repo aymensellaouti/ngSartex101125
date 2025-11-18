@@ -1,5 +1,12 @@
 <ol class="list-group">
-  <li class="list-group-item list-group-item" *ngFor="let actualCv of cvs">
+  <li
+    *ngFor="let actualCv of cvs; let isOdd = odd"
+    class="list-group-item"
+    [ngClass]="{
+      'list-group-item-primary': isOdd,
+      'list-group-item-secondary': !isOdd
+    }"
+  >
     <app-cv-item (selectCv)="forwardCv.emit($event)" [cv]="actualCv" />
   </li>
 </ol>
