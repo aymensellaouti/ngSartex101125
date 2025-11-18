@@ -2,6 +2,7 @@ import { Component, inject } from "@angular/core";
 import { Cv } from "../model/cv.model";
 import { LoggerService } from "../../services/logger.service";
 import { TodoService } from "../../todo/service/todo.service";
+import { ToastrService } from "ngx-toastr";
 
 @Component({
   selector: "app-cv",
@@ -10,6 +11,7 @@ import { TodoService } from "../../todo/service/todo.service";
 })
 export class CvComponent {
   todoService = inject(TodoService);
+  toastr = inject(ToastrService);
   today = new Date();
   cvs: Cv[] = [
     new Cv(1, "anis", "El Hadj Ali", "Dev", "", "12121212", 20),
@@ -26,6 +28,7 @@ export class CvComponent {
   ];
   constructor(private loggerService: LoggerService) {
     loggerService.log("cc je suis le cv Component");
+    this.toastr.info("Bienvenu dans notre CvTech");
   }
   selecetdCv: Cv | null = null;
   onForwardCv(cv: Cv) {

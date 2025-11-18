@@ -26,7 +26,8 @@ import { LoggerService } from "./services/logger.service";
 import { SayHelloService } from "./services/say-hello.service";
 import { TodoComponent } from "./todo/todo/todo.component";
 import { WeekTodoComponent } from "./todo/week-todo/week-todo.component";
-
+import { ToastrModule } from "ngx-toastr";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +52,13 @@ import { WeekTodoComponent } from "./todo/week-todo/week-todo.component";
     TodoComponent,
     WeekTodoComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(), // ToastrModule added
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
