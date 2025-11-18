@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
-import { Cv } from '../model/cv.model';
-
+import { Component, inject } from "@angular/core";
+import { Cv } from "../model/cv.model";
+import { EmbaucheService } from "../services/embauche.service";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @Component({
-  selector: 'app-embauche',
-  templateUrl: './embauche.component.html',
-  styleUrls: ['./embauche.component.css'],
+  selector: "app-embauche",
+  templateUrl: "./embauche.component.html",
+  styleUrls: ["./embauche.component.css"],
 })
 export class EmbaucheComponent {
-   public embauchees: Cv[] = [];
+  embaucheService = inject(EmbaucheService);
+  embauchees: Cv[] = this.embaucheService.getEmbauchees();
 }

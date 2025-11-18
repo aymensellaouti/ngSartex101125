@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
-import { Cv } from '../model/cv.model';
+import { Injectable } from "@angular/core";
+import { Cv } from "../model/cv.model";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class EmbaucheService {
   #embauchees: Cv[] = [];
@@ -18,6 +18,10 @@ export class EmbaucheService {
    * @returns {boolean} return true si embauchée false sinon
    */
   embaucher(cv: Cv): boolean {
+    if (!this.#embauchees.includes(cv)) {
+      this.#embauchees.push(cv);
+      return true;
+    }
     return false;
   }
 }

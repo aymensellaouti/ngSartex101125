@@ -5,14 +5,26 @@ import { Cv } from "../model/cv.model";
   providedIn: "root",
 })
 export class CvService {
-  #cvs = [];
+  #cvs = [
+    new Cv(1, "anis", "El Hadj Ali", "Dev", "", "12121212", 20),
+    new Cv(
+      2,
+      "sonia",
+      "El Hadj Ali",
+      "Dev",
+      "rotating_card_profile.png",
+      "12121212",
+      20
+    ),
+    new Cv(3, "youssef", "zarrad", "Dev", "         ", "12121212", 20),
+  ];
 
   /**
    * Retourne la liste des cvs
    * @returns Cv[]
    */
   getCvs(): Cv[] {
-    return [];
+    return this.#cvs;
   }
 
   /**

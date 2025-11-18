@@ -28,6 +28,7 @@ import { TodoComponent } from "./todo/todo/todo.component";
 import { WeekTodoComponent } from "./todo/week-todo/week-todo.component";
 import { ToastrModule } from "ngx-toastr";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { EmbaucheComponent } from "./cv/embauche/embauche.component";
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +52,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     DefaultImagePipe,
     TodoComponent,
     WeekTodoComponent,
+    EmbaucheComponent,
   ],
   imports: [
     BrowserModule,
