@@ -4,7 +4,7 @@ const USDBTC = 91329;
   name: "btc2usd",
 })
 export class Btc2usdPipe implements PipeTransform {
-  transform(amount: number): number {
-    return amount * USDBTC;
+  transform(amount: number, isBtcToUsd = true): number {
+    return isBtcToUsd ? amount * USDBTC : amount / USDBTC;
   }
 }

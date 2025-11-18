@@ -1,6 +1,7 @@
 <div class="alert alert-warning">
   {{ today | date : "long" | uppercase }}
   <p>{{ 1 | btc2usd | currency }}</p>
+  <p>{{ 1 | btc2usd : false }}</p>
 </div>
 <div class="row">
   <div class="col">
