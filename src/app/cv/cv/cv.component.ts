@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { Cv } from "../model/cv.model";
+import { LoggerService } from "../../services/logger.service";
 
 @Component({
   selector: "app-cv",
@@ -21,7 +22,9 @@ export class CvComponent {
     ),
     new Cv(3, "youssef", "zarrad", "Dev", "         ", "12121212", 20),
   ];
-
+  constructor(private loggerService: LoggerService) {
+    loggerService.log("cc je suis le cv Component");
+  }
   selecetdCv: Cv | null = null;
   onForwardCv(cv: Cv) {
     this.selecetdCv = cv;

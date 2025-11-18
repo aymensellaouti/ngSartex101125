@@ -17,11 +17,15 @@ import { CvItemComponent } from "./cv/cv-item/cv-item.component";
 import { CvCardComponent } from "./cv/cv-card/cv-card.component";
 import { TestNgStyleComponent } from "./directives/test-ng-style/test-ng-style.component";
 import { MiniWordComponent } from "./directives/mini-word/mini-word.component";
-import { AmpouleComponent } from './directives/ampoule/ampoule.component';
-import { HighlightDirective } from './directives/highlight.directive';
-import { RainbowDirective } from './directives/rainbow.directive';
-import { Btc2usdPipe } from './pipes/btc2usd.pipe';
-import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
+import { AmpouleComponent } from "./directives/ampoule/ampoule.component";
+import { HighlightDirective } from "./directives/highlight.directive";
+import { RainbowDirective } from "./directives/rainbow.directive";
+import { Btc2usdPipe } from "./pipes/btc2usd.pipe";
+import { DefaultImagePipe } from "./cv/pipes/default-image.pipe";
+import { LoggerService } from "./services/logger.service";
+import { SayHelloService } from "./services/say-hello.service";
+import { TodoComponent } from "./todo/todo/todo.component";
+import { WeekTodoComponent } from "./todo/week-todo/week-todo.component";
 
 @NgModule({
   declarations: [
@@ -44,6 +48,8 @@ import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
     RainbowDirective,
     Btc2usdPipe,
     DefaultImagePipe,
+    TodoComponent,
+    WeekTodoComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
