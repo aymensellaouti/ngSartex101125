@@ -19,6 +19,7 @@ import { TestNgStyleComponent } from "./directives/test-ng-style/test-ng-style.c
 import { MiniWordComponent } from "./directives/mini-word/mini-word.component";
 import { AmpouleComponent } from './directives/ampoule/ampoule.component';
 import { HighlightDirective } from './directives/highlight.directive';
+import { RainbowDirective } from './directives/rainbow.directive';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { HighlightDirective } from './directives/highlight.directive';
     MiniWordComponent,
     AmpouleComponent,
     HighlightDirective,
+    RainbowDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

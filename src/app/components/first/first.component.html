@@ -1,4 +1,4 @@
-<div (click)="showHide()" class="alert alert-success">
+<div appRainbow (click)="showHide()" class="alert alert-success">
   <p [hidden]="isHidden">{{ name }} works!</p>
   <input
     #myInput
@@ -9,6 +9,8 @@
   Le contenu de l'input est : {{ message }}
   <app-second />
 </div>
-<p appHighlight>test appHighlight</p>
+<p appRainbow appHighlight>test appHighlight</p>
 <p [in]="'white'" appHighlight>test appHighlight</p>
 <p [in]="'lightblue'" [out]="'yellow'" appHighlight>test appHighlight</p>
+
+<input type="text" appRainbow />
