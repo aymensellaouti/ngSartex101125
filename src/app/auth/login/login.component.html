@@ -10,7 +10,14 @@
       aria-describedby="emailHelp"
       required
       email
+      #emailInput="ngModel"
     />
+    <div
+      *ngIf="emailInput.invalid && emailInput.touched"
+      class="alert alert-danger"
+    >
+      Merci de saisir un email valid
+    </div>
     <div id="emailHelp" class="form-text">
       We'll never share your email with anyone else.
     </div>
