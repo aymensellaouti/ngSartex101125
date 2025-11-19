@@ -34,6 +34,8 @@ import { DetailsCvComponent } from "./cv/details-cv/details-cv.component";
 import { Nf404Component } from './components/nf404/nf404.component';
 import { FrontComponent } from './tempaltes/front/front.component';
 import { AdminComponent } from './tempaltes/admin/admin.component';
+import { TestFormComponent } from './form/test-form/test-form.component';
+import { LoginComponent } from './auth/login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,6 +65,8 @@ import { AdminComponent } from './tempaltes/admin/admin.component';
     Nf404Component,
     FrontComponent,
     AdminComponent,
+    TestFormComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
