@@ -36,6 +36,8 @@ import { FrontComponent } from './tempaltes/front/front.component';
 import { AdminComponent } from './tempaltes/admin/admin.component';
 import { TestFormComponent } from './form/test-form/test-form.component';
 import { LoginComponent } from './auth/login/login.component';
+import { TestObservableComponent } from './rxjs/test-observable/test-observable.component';
+import { SliderComponent } from './rxjs/slider/slider.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,6 +69,8 @@ import { LoginComponent } from './auth/login/login.component';
     AdminComponent,
     TestFormComponent,
     LoginComponent,
+    TestObservableComponent,
+    SliderComponent,
   ],
   imports: [
     BrowserModule,
