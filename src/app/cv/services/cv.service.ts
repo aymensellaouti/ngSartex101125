@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Cv } from "../model/cv.model";
+import { Subject } from "rxjs";
 
 @Injectable({
   providedIn: "root",
@@ -18,7 +19,16 @@ export class CvService {
     ),
     new Cv(3, "youssef", "zarrad", "Dev", "         ", "12121212", 20),
   ];
-
+  // Cv1 Cv3 CV9 Cv1 ....
+  /**
+   * Le subject des cvs sélectionnés
+   *
+   * */
+  #selectCvSubject$ = new Subject<Cv>();
+  /**
+   * Le flux des cvs séléctionnés
+   */
+  selectedCv$ = this.#selectCvSubject$.asObservable();
   /**
    * Retourne la liste des cvs
    * @returns Cv[]
@@ -52,5 +62,13 @@ export class CvService {
       return true;
     }
     return false;
+  }
+
+  /**
+   * Ajoute un cv au flux des cvs sélectionnés
+   * @param cv : le cv sélectionné
+   */
+  selectCv(cv: Cv) {
+    this.#selectCvSubject$.next(cv);
   }
 }

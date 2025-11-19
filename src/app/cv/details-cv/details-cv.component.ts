@@ -25,4 +25,7 @@ export class DetailsCvComponent {
       this.router.navigate([APP_ROUTES.cv]);
     }
   }
+  selectCv() {
+    if (this.cv) this.cvService.selectCv(this.cv);
+  }
 }

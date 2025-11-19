@@ -4,6 +4,7 @@ import { LoggerService } from "../../services/logger.service";
 import { TodoService } from "../../todo/service/todo.service";
 import { ToastrService } from "ngx-toastr";
 import { CvService } from "../services/cv.service";
+import { Observable, tap } from "rxjs";
 
 @Component({
   selector: "app-cv",
@@ -16,11 +17,22 @@ export class CvComponent {
   cvService = inject(CvService);
   today = new Date();
   cvs: Cv[] = this.cvService.getCvs();
+  selecetdCv$: Observable<Cv> = this.cvService.selectedCv$.pipe(
+    tap((cv) => {
+      console.log("Log from tap un cv sélectionné");
+    })
+  );
   constructor(private loggerService: LoggerService) {
     loggerService.log("cc je suis le cv Component");
     this.toastr.info("Bienvenu dans notre CvTech");
+    // this.cvService.selectedCv$.subscribe({
+    //   next: (cv) => {
+    //     console.log("cv sélectionne ana le cvComponent");
+
+    //     this.selecetdCv = cv;
+    //   },
+    // });
   }
-  selecetdCv: Cv | null = null;
   // onForwardCv(cv: Cv) {
   //   this.selecetdCv = cv;
   // }
