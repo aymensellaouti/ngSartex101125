@@ -15,7 +15,13 @@ export class TodoComponent {
   todos: Todo[] = this.todoService.getTodos();
   // le todo eli bech nzidouh
   todo = new Todo();
-
+  constructor() {
+    this.todoService.getTodosFromApi().subscribe({
+      next: (todos) => {
+        console.log(todos);
+      },
+    });
+  }
   addTodo() {
     this.todoService.addTodo(this.todo);
     this.todo = new Todo();

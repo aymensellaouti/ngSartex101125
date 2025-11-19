@@ -1,4 +1,5 @@
 import { NgModule } from "@angular/core";
+import { HttpClientModule } from "@angular/common/http";
 import { BrowserModule } from "@angular/platform-browser";
 
 import { AppRoutingModule } from "./app-routing.module";
@@ -31,13 +32,13 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { EmbaucheComponent } from "./cv/embauche/embauche.component";
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { DetailsCvComponent } from "./cv/details-cv/details-cv.component";
-import { Nf404Component } from './components/nf404/nf404.component';
-import { FrontComponent } from './tempaltes/front/front.component';
-import { AdminComponent } from './tempaltes/admin/admin.component';
-import { TestFormComponent } from './form/test-form/test-form.component';
-import { LoginComponent } from './auth/login/login.component';
-import { TestObservableComponent } from './rxjs/test-observable/test-observable.component';
-import { SliderComponent } from './rxjs/slider/slider.component';
+import { Nf404Component } from "./components/nf404/nf404.component";
+import { FrontComponent } from "./tempaltes/front/front.component";
+import { AdminComponent } from "./tempaltes/admin/admin.component";
+import { TestFormComponent } from "./form/test-form/test-form.component";
+import { LoginComponent } from "./auth/login/login.component";
+import { TestObservableComponent } from "./rxjs/test-observable/test-observable.component";
+import { SliderComponent } from "./rxjs/slider/slider.component";
 @NgModule({
   declarations: [
     AppComponent,
@@ -78,6 +79,7 @@ import { SliderComponent } from './rxjs/slider/slider.component';
     FormsModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added
+    HttpClientModule,
   ],
   bootstrap: [AppComponent],
 })
