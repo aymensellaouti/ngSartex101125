@@ -31,6 +31,9 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { EmbaucheComponent } from "./cv/embauche/embauche.component";
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { DetailsCvComponent } from "./cv/details-cv/details-cv.component";
+import { Nf404Component } from './components/nf404/nf404.component';
+import { FrontComponent } from './tempaltes/front/front.component';
+import { AdminComponent } from './tempaltes/admin/admin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,6 +60,9 @@ import { DetailsCvComponent } from "./cv/details-cv/details-cv.component";
     EmbaucheComponent,
     NavbarComponent,
     DetailsCvComponent,
+    Nf404Component,
+    FrontComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,
