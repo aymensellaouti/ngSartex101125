@@ -21,7 +21,7 @@ export class CvComponent {
     this.toastr.info("Bienvenu dans notre CvTech");
   }
   selecetdCv: Cv | null = null;
-  onForwardCv(cv: Cv) {
-    this.selecetdCv = cv;
-  }
+  // onForwardCv(cv: Cv) {
+  //   this.selecetdCv = cv;
+  // }
 }
