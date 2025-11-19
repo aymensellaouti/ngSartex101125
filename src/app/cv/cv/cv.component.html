@@ -5,7 +5,7 @@
 </div>
 <div class="row">
   <div class="col">
-    <app-cv-list [cvs]="cvs" />
+    <app-cv-list *ngIf="cvs$ | async as cvs" [cvs]="cvs" />
   </div>
   <div class="col"><app-cv-card [cv]="selecetdCv$ | async" /></div>
 </div>
