@@ -9,14 +9,16 @@ import { SecondComponent } from "./components/second/second.component";
 import { DetailsCvComponent } from "./cv/details-cv/details-cv.component";
 import { Nf404Component } from "./components/nf404/nf404.component";
 import { FrontComponent } from "./tempaltes/front/front.component";
+import { LoginComponent } from "./auth/login/login.component";
 
 const routes: Routes = [
-  { path: "", component: FirstComponent },
   {
     path: "",
     component: FrontComponent,
     children: [
+      { path: "", component: FirstComponent },
       { path: "todo", component: TodoComponent },
+      { path: "login", component: LoginComponent },
       {
         path: "cv",
         children: [
