@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
+import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
 import { FirstComponent } from "./components/first/first.component";
 import { TodoComponent } from "./todo/todo/todo.component";
 import { CvComponent } from "./cv/cv/cv.component";
@@ -12,6 +12,7 @@ import { FrontComponent } from "./tempaltes/front/front.component";
 import { LoginComponent } from "./auth/login/login.component";
 import { AddCvComponent } from "./cv/add-cv/add-cv.component";
 import { authGuard } from "./auth/guards/auth.guard";
+import { CustomPreloadingStrategy } from "./auth/preloading strategy/custom.preloading-startegy";
 
 const routes: Routes = [
   {
@@ -21,6 +22,9 @@ const routes: Routes = [
       { path: "", component: FirstComponent },
       {
         path: "cv",
+        data: {
+          preload: false,
+        },
         loadChildren: () =>
           import("./cv/cv.module").then((module) => module.CvModule),
       },
@@ -36,7 +40,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, {
+      preloadingStrategy: CustomPreloadingStrategy,
+      // preloadingStrategy: PreloadAllModules,
+    }),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
