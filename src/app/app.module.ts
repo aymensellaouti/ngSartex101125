@@ -39,7 +39,7 @@ import { TestFormComponent } from "./form/test-form/test-form.component";
 import { LoginComponent } from "./auth/login/login.component";
 import { TestObservableComponent } from "./rxjs/test-observable/test-observable.component";
 import { SliderComponent } from "./rxjs/slider/slider.component";
-import { AddCvComponent } from './cv/add-cv/add-cv.component';
+import { AddCvComponent } from "./cv/add-cv/add-cv.component";
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,22 +50,28 @@ import { AddCvComponent } from './cv/add-cv/add-cv.component';
     RotatingCardComponent,
     PereComponent,
     FilsComponent,
+
+    // CV
     CvComponent,
     CvListComponent,
     CvItemComponent,
     CvCardComponent,
+    DefaultImagePipe,
+    DetailsCvComponent,
+    EmbaucheComponent,
+    AddCvComponent,
+
+    // Todo
+    TodoComponent,
+    WeekTodoComponent,
+
     TestNgStyleComponent,
     MiniWordComponent,
     AmpouleComponent,
     HighlightDirective,
     RainbowDirective,
     Btc2usdPipe,
-    DefaultImagePipe,
-    TodoComponent,
-    WeekTodoComponent,
-    EmbaucheComponent,
     NavbarComponent,
-    DetailsCvComponent,
     Nf404Component,
     FrontComponent,
     AdminComponent,
@@ -73,7 +79,6 @@ import { AddCvComponent } from './cv/add-cv/add-cv.component';
     LoginComponent,
     TestObservableComponent,
     SliderComponent,
-    AddCvComponent,
   ],
   imports: [
     BrowserModule,
