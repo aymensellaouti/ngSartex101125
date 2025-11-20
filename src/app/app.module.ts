@@ -12,26 +12,17 @@ import { FormsModule } from "@angular/forms";
 import { RotatingCardComponent } from "./components/rotating-card/rotating-card.component";
 import { PereComponent } from "./commInterCompo/pere/pere.component";
 import { FilsComponent } from "./commInterCompo/fils/fils.component";
-import { CvComponent } from "./cv/cv/cv.component";
-import { CvListComponent } from "./cv/cv-list/cv-list.component";
-import { CvItemComponent } from "./cv/cv-item/cv-item.component";
-import { CvCardComponent } from "./cv/cv-card/cv-card.component";
 import { TestNgStyleComponent } from "./directives/test-ng-style/test-ng-style.component";
 import { MiniWordComponent } from "./directives/mini-word/mini-word.component";
 import { AmpouleComponent } from "./directives/ampoule/ampoule.component";
 import { HighlightDirective } from "./directives/highlight.directive";
 import { RainbowDirective } from "./directives/rainbow.directive";
 import { Btc2usdPipe } from "./pipes/btc2usd.pipe";
-import { DefaultImagePipe } from "./cv/pipes/default-image.pipe";
-import { LoggerService } from "./services/logger.service";
-import { SayHelloService } from "./services/say-hello.service";
 import { TodoComponent } from "./todo/todo/todo.component";
 import { WeekTodoComponent } from "./todo/week-todo/week-todo.component";
 import { ToastrModule } from "ngx-toastr";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { EmbaucheComponent } from "./cv/embauche/embauche.component";
 import { NavbarComponent } from "./components/navbar/navbar.component";
-import { DetailsCvComponent } from "./cv/details-cv/details-cv.component";
 import { Nf404Component } from "./components/nf404/nf404.component";
 import { FrontComponent } from "./tempaltes/front/front.component";
 import { AdminComponent } from "./tempaltes/admin/admin.component";
@@ -39,8 +30,8 @@ import { TestFormComponent } from "./form/test-form/test-form.component";
 import { LoginComponent } from "./auth/login/login.component";
 import { TestObservableComponent } from "./rxjs/test-observable/test-observable.component";
 import { SliderComponent } from "./rxjs/slider/slider.component";
-import { AddCvComponent } from "./cv/add-cv/add-cv.component";
 import { AUTH_INTERCEPTOR_PROVIDER } from "./auth/interceptors/auth.interceptor";
+import { CvModule } from "./cv/cv.module";
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,16 +43,6 @@ import { AUTH_INTERCEPTOR_PROVIDER } from "./auth/interceptors/auth.interceptor"
     PereComponent,
     FilsComponent,
 
-    // CV
-    CvComponent,
-    CvListComponent,
-    CvItemComponent,
-    CvCardComponent,
-    DefaultImagePipe,
-    DetailsCvComponent,
-    EmbaucheComponent,
-    AddCvComponent,
-
     // Todo
     TodoComponent,
     WeekTodoComponent,
@@ -71,7 +52,6 @@ import { AUTH_INTERCEPTOR_PROVIDER } from "./auth/interceptors/auth.interceptor"
     AmpouleComponent,
     HighlightDirective,
     RainbowDirective,
-    Btc2usdPipe,
     NavbarComponent,
     Nf404Component,
     FrontComponent,

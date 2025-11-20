@@ -19,16 +19,13 @@ const routes: Routes = [
     component: FrontComponent,
     children: [
       { path: "", component: FirstComponent },
-      { path: "todo", component: TodoComponent },
-      { path: "login", component: LoginComponent },
       {
         path: "cv",
-        children: [
-          { path: "", component: CvComponent },
-          { path: "add", component: AddCvComponent, canActivate: [authGuard] },
-          { path: ":id", component: DetailsCvComponent },
-        ],
+        loadChildren: () =>
+          import("./cv/cv.module").then((module) => module.CvModule),
       },
+      { path: "todo", component: TodoComponent },
+      { path: "login", component: LoginComponent },
       { path: "word", component: MiniWordComponent },
       { path: "color", component: ColorComponent },
     ],
