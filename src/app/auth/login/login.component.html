@@ -34,7 +34,12 @@
       minlength="4"
     />
   </div>
-  <button [disabled]="loginForm.invalid" type="submit" class="btn btn-primary">
+  <button
+    (click)="login(loginForm.value)"
+    [disabled]="loginForm.invalid"
+    type="submit"
+    class="btn btn-primary"
+  >
     Submit
   </button>
 </form>

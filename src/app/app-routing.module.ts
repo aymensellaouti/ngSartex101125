@@ -10,6 +10,7 @@ import { DetailsCvComponent } from "./cv/details-cv/details-cv.component";
 import { Nf404Component } from "./components/nf404/nf404.component";
 import { FrontComponent } from "./tempaltes/front/front.component";
 import { LoginComponent } from "./auth/login/login.component";
+import { AddCvComponent } from "./cv/add-cv/add-cv.component";
 
 const routes: Routes = [
   {
@@ -23,6 +24,7 @@ const routes: Routes = [
         path: "cv",
         children: [
           { path: "", component: CvComponent },
+          { path: "add", component: AddCvComponent },
           { path: ":id", component: DetailsCvComponent },
         ],
       },

@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from "@angular/router";
 import { CvService } from "../services/cv.service";
 import { APP_ROUTES } from "../../config/app-routes.config";
 import { ToastrService } from "ngx-toastr";
+import { AuthService } from "../../auth/auth.service";
 
 @Component({
   selector: "app-details-cv",
@@ -13,6 +14,7 @@ import { ToastrService } from "ngx-toastr";
 export class DetailsCvComponent {
   cv: Cv | null = null;
   cvService = inject(CvService);
+  authService = inject(AuthService);
   acr = inject(ActivatedRoute);
   toastr = inject(ToastrService);
   router = inject(Router);
