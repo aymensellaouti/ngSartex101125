@@ -55,6 +55,12 @@ export class CvService {
   findCvById(id: number): Cv | null {
     return this.#cvs.find((cv) => cv.id === +id) ?? null;
   }
+  getCvById(id: number): Observable<Cv> {
+    return this.http.get<Cv>(APP_API.cvs + id);
+  }
+  deleteCvById(id: number): Observable<{ count: number }> {
+    return this.http.delete<{ count: number }>(APP_API.cvs + id);
+  }
 
   /**
    *
